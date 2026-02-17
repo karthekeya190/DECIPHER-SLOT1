@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decipher Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DECIPHER</h1>
+            <p>Cryptographic Challenge</p>
+        </header>
+
+        <!-- Progress -->
+        <div class="progress">
+            <div class="step active" id="step1">Round 1</div>
+            <div class="step" id="step2">Round 2</div>
+            <div class="step" id="step3">Victory</div>
+        </div>
+
+        <!-- Round 1 -->
+        <div class="card" id="round1">
+            <h2>Round 1: Legacy Access</h2>
+            
+            <div class="info-grid">
+                <div class="info">
+                    <strong>Cipher:</strong> Vigenère
+                </div>
+                <div class="info">
+                    <strong>Encrypted:</strong> ORAIGJYTCNMY
+                </div>
+                <div class="info">
+                    <strong>Key Length:</strong> 3 characters
+                </div>
+                <div class="info">
+                    <strong>Mapping:</strong> A=0 to Z=25
+                </div>
+            </div>
+
+
+
+            <div class="input-group">
+                <label for="round1Input">Decrypted Passphrase:</label>
+                <input type="text" id="round1Input" placeholder="Enter decoded message">
+                <button id="round1Submit">Verify</button>
+            </div>
+
+            <div class="stats">
+                <span>Attempts: <span id="attempts1">0</span></span>
+                <span>Status: <span id="status1">Awaiting Input</span></span>
+            </div>
+        </div>
+
+
+
+        <!-- Fragment #1: GPCTR -->
+        <!-- Fragment #2: SKPET -->
+
+        <!-- Round 2 -->
+        <div class="card hidden" id="round2">
+            <h2>Round 2: Fragment Assembly</h2>
+            
+            <div class="alert">
+                <strong>⚠️ Key Rotation:</strong> A new encryption key is in effect. 
+                Find and assemble 4 token fragments scattered in the source code.
+            </div>
+
+            <div class="fragments">
+                <h3>Token Fragments:</h3>
+                <div class="fragment-item">
+                    <span>Fragment 1 (HTML):</span> <span id="frag1">?????</span>
+                </div>
+                <div class="fragment-item">
+                    <span>Fragment 2 (HTML):</span> <span id="frag2">?????</span>
+                </div>
+                <div class="fragment-item">
+                    <span>Fragment 3 (CSS):</span> <span id="frag3">??</span>
+                </div>
+                <div class="fragment-item">
+                    <span>Fragment 4 (Console):</span> <span id="frag4">??</span>
+                </div>
+                <div class="assembled">
+                    <strong>Assembled:</strong> <span id="assembled">____________</span>
+                </div>
+            </div>
+
+
+
+            <div class="input-group">
+                <label for="round2Input">Master Passphrase:</label>
+                <input type="text" id="round2Input" placeholder="Decrypt the assembled token">
+                <button id="round2Submit">Complete</button>
+            </div>
+
+            <div class="stats">
+                <span>Attempts: <span id="attempts2">0</span></span>
+                <span>Status: <span id="status2">Searching Fragments</span></span>
+            </div>
+        </div>
+
+
+
+        <!-- Victory -->
+        <div class="card hidden" id="victory">
+            <h2>🏆 ACCESS GRANTED</h2>
+            <div class="flag-box">
+                <strong>YOUR FLAG:</strong>
+                <div class="flag" id="flagValue"></div>
+            </div>
+            <div class="stats">
+                <div>Total Attempts: <span id="totalAttempts">0</span></div>
+                <div>Completion: 100%</div>
+            </div>
+            <p>Congratulations! You have mastered Vigenère cipher cryptanalysis.</p>
+        </div>
+
+
+
+        <!-- Victory flag: FLAG{VIGENERE_MASTER} -->
+
+        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

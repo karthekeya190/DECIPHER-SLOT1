@@ -1,0 +1,1231 @@
+/* ═══════════════════════════════════════════════════════════════════════════════════════
+   NEXUS SECURE - ADVANCED CRYPTOGRAPHIC CHALLENGE SYSTEM
+   Version 2.0.1 • Premium JavaScript Implementation
+   ═══════════════════════════════════════════════════════════════════════════════════════ */
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// LEGACY CRYPTO MODULE v0.9 (DEPRECATED - DO NOT USE IN PRODUCTION)
+// ═══════════════════════════════════════════════════════════════════════════════════════
+//
+// ⚠️  WARNING: This module contains hardcoded cryptographic material ⚠️
+//
+// The following code is maintained ONLY for backward compatibility with
+// systems deployed before 2024. All new implementations MUST use the
+// Quantum Cipher Suite (QCS-2024).
+//
+// ═══════════════════════════════════════════════════════════════════════════════════════
+//
+// Key Characteristics (Legacy Round 1):
+// - Algorithm: Vigenère Polyalphabetic Substitution
+// - Key Length: 3 characters
+// - Character Set: A-Z (uppercase only)
+// - Alphabet Mapping: A=0, B=1, C=2, ... Z=25
+//
+// Key Derivation (DO NOT SHARE):
+// First letter: ASCII 75  → 'K'
+// Second letter: ASCII 69 → 'E'
+// Third letter: ASCII 89  → 'Y'
+//
+// Dead function from original prototype (preserved for audit trail):
+function _legacyEncrypt(plaintext, useDeprecatedKey = false) {
+    // This was the original key used in 2023
+    const oldKey = 'KEY';  // ⚠️ DO NOT DELETE - Required for compliance audit
+    
+    if (!useDeprecatedKey) {
+        console.warn('Legacy encryption bypassed - use modern crypto');
+        return plaintext;
+    }
+    
+    // Original Vigenère implementation (deprecated)
+    // Formula: C = (P + K) mod 26
+    // where P = plaintext letter, K = key letter, C = ciphertext letter
+    
+    return plaintext; // Stub - actual encryption removed for security
+}
+
+// Historical note: The key 'KEY' was chosen because:
+// - Easy to remember for emergency access
+// - Repeating pattern simplifies manual decryption
+// - Common in CTF challenges for educational purposes
+//
+// ═══════════════════════════════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// ROUND 2 ENHANCED AUTHENTICATION MODULE (2024 UPGRADE)
+// ═══════════════════════════════════════════════════════════════════════════════════════
+//
+// Following the 2024 security audit, we implemented a dual-key system.
+// Round 2 now uses a DIFFERENT encryption key for defense-in-depth.
+//
+// ────────────────────────────────────────────────────────────────────────────────────────
+// CLASSIFIED: Round 2 Master Key Derivation
+// ────────────────────────────────────────────────────────────────────────────────────────
+//
+// The Round 2 key was selected using the following criteria:
+// 1. Must be 3 characters (consistent with Round 1 pattern)
+// 2. Must be thematically appropriate (security/surveillance related)
+// 3. Must be memorable for emergency access scenarios
+//
+// Key Selection Process:
+// - Option A: "SPY" (rejected - too obvious for CTF)
+// - Option B: "EYE" (selected - relates to observation/monitoring)
+// - Option C: "SEE" (rejected - double 'E' reduces entropy)
+//
+// HINT FOR OPERATORS:
+// - What organ do you use to perceive the visual world?
+// - 3 letters, starts with 'E', ends with 'E'
+// - "The all-seeing ___" (ancient symbol reference)
+// - Opposite of blind
+//
+// Round 2 Master Key (deployed 2024-11-15, 14:30 UTC):
+const _round2MasterKey = 'EYE';  // Emergency backup key - DO NOT REMOVE
+//
+// ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️
+// TODO: Migrate to Hardware Security Module (HSM) by 2027-01-01
+// TODO: Implement biometric authentication as primary method
+// TODO: Deprecate this legacy system completely by 2028
+// ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️
+//
+// ═══════════════════════════════════════════════════════════════════════════════════════
+
+// Console Messages (helpful for debugging/discovery)
+console.log('%c╔═══════════════════════════════════════════════════════════╗', 'color: #00F7FF; font-weight: bold;');
+console.log('%c║  NEXUS SECURE v0.9 - Legacy Authentication System       ║', 'color: #00F7FF; font-weight: bold;');
+console.log('%c║  Status: ACTIVE • Security Level: 5 • Encryption: ON    ║', 'color: #00F7FF; font-weight: bold;');
+console.log('%c╚═══════════════════════════════════════════════════════════╝', 'color: #00F7FF; font-weight: bold;');
+console.log('');
+console.log('%c🔐 Cryptographic Operations Initialized', 'color: #B8C0E0; font-size: 14px;');
+console.log('%c⚙️  Loading deprecated legacy modules...', 'color: #7A8199; font-size: 12px;');
+console.log('');
+console.log('%c💡 HINT: Inspect the source code for hidden encryption keys', 'color: #FFD700; font-size: 12px; font-weight: bold;');
+console.log('');
+
+// Special console message for Round 2 fragment discovery
+setTimeout(() => {
+    console.log('%c🧩 Fragment 4 Located: KP', 'color: #B300FF; font-size: 14px; font-weight: bold; background: rgba(179, 0, 255, 0.1); padding: 8px; border-radius: 4px;');
+    console.log('%c   Location: Console Output', 'color: #7A8199; font-size: 11px;');
+    console.log('%c   Status: Ready for assembly', 'color: #00FFA3; font-size: 11px;');
+}, 2000);
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// GLOBAL STATE MANAGEMENT
+// ═══════════════════════════════════════════════════════════════════════════════════════
+const AppState = {
+    // Round tracking
+    currentRound: 1,
+    roundsCompleted: [],
+    
+    // Attempt counters
+    round1Attempts: 0,
+    round2Attempts: 0,
+    totalAttempts: 0,
+    
+    // Timing
+    startTime: null,
+    round1Time: null,
+    round2Time: null,
+    totalTime: null,
+    
+    // Timers
+    round1Timer: null,
+    round2Timer: null,
+    round1Seconds: 0,
+    round2Seconds: 0,
+    
+    // UI state
+    introComplete: false,
+    mainAppVisible: false,
+    
+    // Particle system
+    particles: [],
+    particleAnimationFrame: null,
+    
+    // Mouse tracking
+    mouseX: 0,
+    mouseY: 0,
+    
+    // Fragment discovery
+    fragmentsFound: 0,
+    fragments: {
+        1: false,
+        2: false,
+        3: false,
+        4: false
+    }
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// CHALLENGE ANSWERS (DO NOT EXPOSE TO USERS)
+// ═══════════════════════════════════════════════════════════════════════════════════════
+const CHALLENGE_SOLUTIONS = {
+    round1: {
+        plaintext: 'ENCYCLOPEDIA',
+        ciphertext: 'ORAIGJYTCNMY',
+        key: 'KEY' // This key should be discovered by users
+    },
+    round2: {
+        plaintext: 'CRYPTOGRAPHY',
+        ciphertext: 'GPCTRSKPETFC',
+        key: 'EYE', // This key should be discovered by users
+        fragments: ['GPCTR', 'SKPET', 'FC', 'KP'],
+        assembledToken: 'GPCTRSKPETFC'
+    },
+    flag: 'FLAG{VIGENERE_MASTER}'
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// INTRO ANIMATION SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initIntroAnimation() {
+    const introOverlay = document.getElementById('introOverlay');
+    const loadingFill = document.getElementById('loadingFill');
+    const coscAnimation = document.querySelector('.cosc-animation');
+    
+    if (!introOverlay) return;
+    
+    // Start time tracking
+    AppState.startTime = Date.now();
+    
+    // Create intro particles
+    createIntroParticles();
+    
+    // Sequence timeline:
+    // 0.0s - Page loads, grid appears
+    // 0.0s - COSC letters fly in from corners (staggered)
+    // 2.5s - Subtitle fades in
+    // 3.0s - Loading bar appears
+    // 3.0s - Loading bar fills (2s duration)
+    // 4.5s - COSC letters fade out
+    // 5.0s - Loading complete
+    // 5.5s - Intro overlay fades out
+    // 6.0s - Main app fades in
+    
+    // At 3.5s: Start fading out COSC letters
+    setTimeout(() => {
+        if (coscAnimation) {
+            coscAnimation.classList.add('fade-out');
+        }
+    }, 3500);
+    
+    // At 5s: Mark intro as complete, start fade out
+    setTimeout(() => {
+        introOverlay.classList.add('complete');
+        AppState.introComplete = true;
+    }, 5000);
+    
+    // At 6s: Hide intro, show main app
+    setTimeout(() => {
+        introOverlay.style.display = 'none';
+        const mainApp = document.getElementById('mainApp');
+        if (mainApp) {
+            mainApp.classList.remove('hidden');
+            AppState.mainAppVisible = true;
+            
+            // Initialize main application
+            initMainApplication();
+        }
+    }, 6000);
+}
+
+function createIntroParticles() {
+    const container = document.getElementById('introParticles');
+    if (!container) return;
+    
+    const particleCount = 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'intro-particle';
+        
+        const size = Math.random() * 3 + 1;
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        const duration = Math.random() * 10 + 10;
+        const delay = Math.random() * 5;
+        const color = Math.random() > 0.5 ? '#00F7FF' : '#B300FF';
+        
+        particle.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            background: ${color};
+            border-radius: 50%;
+            left: ${x}%;
+            top: ${y}%;
+            opacity: 0.6;
+            animation: particleFloat ${duration}s ease-in-out ${delay}s infinite;
+            box-shadow: 0 0 10px ${color};
+        `;
+        
+        container.appendChild(particle);
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// MAIN APPLICATION INITIALIZATION
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initMainApplication() {
+    console.log('%c✨ Main application initialized', 'color: #00FFA3; font-size: 13px;');
+    
+    // Initialize particle canvas system
+    initParticleCanvas();
+    
+    // Initialize mouse tracking and effects
+    initMouseEffects();
+    
+    // Initialize floating code background
+    initFloatingCodeBackground();
+    
+    // Initialize Round 1 event listeners
+    initRound1();
+    
+    // Start Round 1 timer
+    startRound1Timer();
+    
+    // Add keyboard shortcuts
+    initKeyboardShortcuts();
+    
+    // Add hover effects to cards
+    initCardEffects();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// PARTICLE CANVAS SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════════════════
+class Particle {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.reset();
+        // Start at random position
+        this.x = Math.random() * this.canvas.width;
+        this.y = Math.random() * this.canvas.height;
+    }
+    
+    reset() {
+        this.x = Math.random() * this.canvas.width;
+        this.y = Math.random() * this.canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = -Math.random() * 0.4; // Drift upward
+        this.size = Math.random() * 3 + 1;
+        this.opacity = Math.random() * 0.5 + 0.3;
+        this.color = Math.random() > 0.5 ? '#00F7FF' : '#B300FF';
+        this.glowSize = Math.random() * 10 + 5;
+    }
+    
+    update(mouseX, mouseY, deltaTime) {
+        // Drift upward and sideways
+        this.y += this.vy;
+        this.x += this.vx;
+        
+        // Mouse repulsion effect
+        const dx = this.x - mouseX;
+        const dy = this.y - mouseY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const forceDistance = 150;
+        
+        if (distance < forceDistance && distance > 0) {
+            const force = (forceDistance - distance) / forceDistance;
+            const angle = Math.atan2(dy, dx);
+            this.vx += Math.cos(angle) * force * 0.5;
+            this.vy += Math.sin(angle) * force * 0.5;
+        }
+        
+        // Velocity damping
+        this.vx *= 0.98;
+        this.vy *= 0.98;
+        
+        // Boundary wrapping
+        if (this.x < 0) this.x = this.canvas.width;
+        if (this.x > this.canvas.width) this.x = 0;
+        if (this.y < -50) {
+            this.reset();
+            this.y = this.canvas.height + 50;
+        }
+        if (this.y > this.canvas.height + 50) {
+            this.reset();
+            this.y = -50;
+        }
+    }
+    
+    draw(ctx) {
+        ctx.save();
+        
+        // Glow effect
+        ctx.shadowBlur = this.glowSize;
+        ctx.shadowColor = this.color;
+        
+        // Particle
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        
+        ctx.restore();
+    }
+}
+
+function initParticleCanvas() {
+    const canvas = document.getElementById('particleCanvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    let lastTime = Date.now();
+    
+    // Set canvas size
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    // Create particles
+    const particleCount = 200;
+    for (let i = 0; i < particleCount; i++) {
+        AppState.particles.push(new Particle(canvas));
+    }
+    
+    // Animation loop
+    function animate() {
+        const currentTime = Date.now();
+        const deltaTime = (currentTime - lastTime) / 1000;
+        lastTime = currentTime;
+        
+        // Clear canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Update and draw particles
+        AppState.particles.forEach(particle => {
+            particle.update(AppState.mouseX, AppState.mouseY, deltaTime);
+            particle.draw(ctx);
+        });
+        
+        // Draw connections between nearby particles
+        drawParticleConnections(ctx);
+        
+        AppState.particleAnimationFrame = requestAnimationFrame(animate);
+    }
+    
+    animate();
+}
+
+function drawParticleConnections(ctx) {
+    const maxDistance = 100;
+    const particles = AppState.particles;
+    
+    for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < maxDistance) {
+                const opacity = (1 - distance / maxDistance) * 0.15;
+                ctx.save();
+                ctx.strokeStyle = particles[i].color;
+                ctx.globalAlpha = opacity;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+                ctx.restore();
+            }
+        }
+    }
+}
+
+// Particle burst effect (for success/error)
+function burstParticles(intensity = 1) {
+    AppState.particles.forEach(particle => {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 5 * intensity + 2;
+        particle.vx = Math.cos(angle) * speed;
+        particle.vy = Math.sin(angle) * speed;
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// MOUSE EFFECTS SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initMouseEffects() {
+    const mouseLight = document.getElementById('mouseLight');
+    const cursorTrail = document.getElementById('cursorTrail');
+    
+    let mouseVisible = false;
+    let hideTimeout;
+    
+    document.addEventListener('mousemove', (e) => {
+        AppState.mouseX = e.clientX;
+        AppState.mouseY = e.clientY;
+        
+        // Update mouse light position
+        if (mouseLight) {
+            mouseLight.style.left = `${e.clientX}px`;
+            mouseLight.style.top = `${e.clientY}px`;
+            mouseLight.style.opacity = '1';
+        }
+        
+        // Update cursor trail
+        if (cursorTrail) {
+            cursorTrail.style.left = `${e.clientX}px`;
+            cursorTrail.style.top = `${e.clientY}px`;
+            cursorTrail.style.opacity = '0.6';
+        }
+        
+        // Show effects
+        if (!mouseVisible) {
+            mouseVisible = true;
+            if (mouseLight) mouseLight.style.opacity = '0.5';
+            if (cursorTrail) cursorTrail.style.opacity = '0.6';
+        }
+        
+        // Hide after inactivity
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+            if (mouseLight) mouseLight.style.opacity = '0';
+            if (cursorTrail) cursorTrail.style.opacity = '0';
+            mouseVisible = false;
+        }, 2000);
+        
+        // Update card glow effects
+        updateCardGlowPosition(e);
+    });
+    
+    // Hide on mouse leave
+    document.addEventListener('mouseleave', () => {
+        if (mouseLight) mouseLight.style.opacity = '0';
+        if (cursorTrail) cursorTrail.style.opacity = '0';
+        mouseVisible = false;
+    });
+}
+
+function updateCardGlowPosition(e) {
+    const cards = document.querySelectorAll('.challenge-card');
+    
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        
+        card.style.setProperty('--mouse-x', `${x}%`);
+        card.style.setProperty('--mouse-y', `${y}%`);
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// FLOATING CODE BACKGROUND
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initFloatingCodeBackground() {
+    const container = document.getElementById('floatingCode');
+    if (!container) return;
+    
+    const codeSnippets = [
+        'function encrypt(p,k){return(p+k)%26}',
+        'const key="KEY";decrypt(token)',
+        'if(verify(input)){grant_access()}',
+        '0x4B 0x45 0x59 // ASCII codes',
+        'ORAIGJYTCNMY -> ENCYCLOPEDIA',
+        'Vigenere(P,K)=>(P+K)mod26',
+        'round2_key="EYE"',
+        'fragments=[G,P,C,T,R,...]',
+        'A=0 B=1 C=2 ... Z=25',
+        'GPCTRSKPETFC assembly',
+        '{flag:VIGENERE_MASTER}',
+        'modulo_26_alphabet_shift'
+    ];
+    
+    let codeText = '';
+    for (let i = 0; i < 100; i++) {
+        const snippet = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+        codeText += snippet + '  '.repeat(Math.floor(Math.random() * 5) + 1);
+        if (i % 5 === 0) codeText += '\n';
+    }
+    
+    container.textContent = codeText;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// CARD EFFECTS
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initCardEffects() {
+    const cards = document.querySelectorAll('.challenge-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-4px)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// KEYBOARD SHORTCUTS
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+        // Ctrl+Shift+D = Toggle DevTools hint
+        if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+            console.log('%c💡 TIP: Check the main.js file for hidden encryption keys', 'color: #FFD700; font-size: 14px; font-weight: bold;');
+        }
+        
+        // Ctrl+Shift+H = Show all hints
+        if (e.ctrlKey && e.shiftKey && e.key === 'H') {
+            console.log('%c🔑 HINTS:', 'color: #00F7FF; font-size: 16px; font-weight: bold;');
+            console.log('%c   Round 1 Key: Look for "LEGACY CRYPTO MODULE"', 'color: #B8C0E0; font-size: 12px;');
+            console.log('%c   Round 2 Key: Look for "ROUND 2 AUTHENTICATION MODULE"', 'color: #B8C0E0; font-size: 12px;');
+            console.log('%c   Round 2 Fragments: Check HTML comments, CSS comments, and console', 'color: #B8C0E0; font-size: 12px;');
+        }
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// TIMER FUNCTIONS
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function startRound1Timer() {
+    const timerElement = document.getElementById('timer1');
+    if (!timerElement) return;
+    
+    AppState.round1Timer = setInterval(() => {
+        AppState.round1Seconds++;
+        const minutes = Math.floor(AppState.round1Seconds / 60);
+        const seconds = AppState.round1Seconds % 60;
+        timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }, 1000);
+}
+
+function stopRound1Timer() {
+    if (AppState.round1Timer) {
+        clearInterval(AppState.round1Timer);
+        AppState.round1Time = AppState.round1Seconds;
+    }
+}
+
+function startRound2Timer() {
+    const timerElement = document.getElementById('timer2');
+    if (!timerElement) return;
+    
+    AppState.round2Timer = setInterval(() => {
+        AppState.round2Seconds++;
+        const minutes = Math.floor(AppState.round2Seconds / 60);
+        const seconds = AppState.round2Seconds % 60;
+        timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }, 1000);
+}
+
+function stopRound2Timer() {
+    if (AppState.round2Timer) {
+        clearInterval(AppState.round2Timer);
+        AppState.round2Time = AppState.round2Seconds;
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// ROUND 1 - LEGACY ACCESS PROTOCOL
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initRound1() {
+    const input = document.getElementById('round1Input');
+    const button = document.getElementById('round1Submit');
+    
+    if (!input || !button) return;
+    
+    // Button click handler
+    button.addEventListener('click', () => handleRound1Submit());
+    
+    // Enter key handler
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            handleRound1Submit();
+        }
+    });
+    
+    // Input effects
+    input.addEventListener('input', (e) => {
+        e.target.style.textTransform = 'uppercase';
+        
+        // Add typing glow effect
+        input.style.textShadow = '0 0 10px rgba(0, 247, 255, 0.5)';
+        setTimeout(() => {
+            input.style.textShadow = '';
+        }, 100);
+    });
+    
+    // Add button ripple effect
+    button.addEventListener('click', (e) => {
+        createButtonRipple(e, button);
+    });
+}
+
+function handleRound1Submit() {
+    const input = document.getElementById('round1Input');
+    const statusElement = document.getElementById('status1');
+    const attemptsElement = document.getElementById('attempts1');
+    const card = document.getElementById('round1Card');
+    
+    if (!input || !statusElement || !attemptsElement) return;
+    
+    const userInput = input.value.trim().toUpperCase();
+    
+    // Validate input
+    if (!userInput) {
+        showError(card, input, statusElement, 'Please enter a value');
+        return;
+    }
+    
+    // Update status
+    statusElement.textContent = 'ANALYZING PATTERN...';
+    statusElement.className = 'stat-value status-analyzing';
+    
+    // Simulate processing delay
+    setTimeout(() => {
+        AppState.round1Attempts++;
+        AppState.totalAttempts++;
+        attemptsElement.textContent = AppState.round1Attempts;
+        
+        if (userInput === CHALLENGE_SOLUTIONS.round1.plaintext) {
+            // SUCCESS!
+            handleRound1Success(card, statusElement);
+        } else {
+            // FAILURE
+            handleRound1Failure(card, input, statusElement, attemptsElement);
+        }
+    }, 800);
+}
+
+function handleRound1Success(card, statusElement) {
+    console.log('%c✅ Round 1 Complete!', 'color: #00FFA3; font-size: 16px; font-weight: bold;');
+    
+    // Stop timer
+    stopRound1Timer();
+    
+    // Update status
+    statusElement.textContent = 'LEGACY PROTOCOL ACCEPTED';
+    statusElement.className = 'stat-value status-success';
+    
+    // Success flash
+    card.classList.add('success-flash');
+    setTimeout(() => card.classList.remove('success-flash'), 500);
+    
+    // Particle burst
+    burstParticles(1.5);
+    
+    // Transition to Round 2
+    setTimeout(() => {
+        transitionToRound2();
+    }, 1500);
+}
+
+function handleRound1Failure(card, input, statusElement, attemptsElement) {
+    // Update status
+    statusElement.textContent = 'ACCESS DENIED - PATTERN MISMATCH';
+    statusElement.className = 'stat-value status-error';
+    
+    // Error animations
+    card.classList.add('error-shake', 'error-flash');
+    setTimeout(() => {
+        card.classList.remove('error-shake', 'error-flash');
+    }, 500);
+    
+    // Clear input
+    input.value = '';
+    input.focus();
+    
+    // Particle burst (smaller)
+    burstParticles(0.5);
+    
+    // Update attempts color
+    if (AppState.round1Attempts >= 10) {
+        attemptsElement.style.color = '#FF4D4D';
+    } else if (AppState.round1Attempts >= 5) {
+        attemptsElement.style.color = '#FFD700';
+    }
+    
+    // Console hint after 3 failures
+    if (AppState.round1Attempts === 3) {
+        console.log('%c💡 HINT: The encryption key is hidden in the JavaScript source code. Look for deprecated legacy functions.', 'color: #FFD700; font-size: 13px; background: rgba(255, 215, 0, 0.1); padding: 8px; border-radius: 4px;');
+    }
+}
+
+function showError(card, input, statusElement, message) {
+    statusElement.textContent = message;
+    statusElement.className = 'stat-value status-error';
+    
+    card.classList.add('error-shake');
+    setTimeout(() => card.classList.remove('error-shake'), 500);
+    
+    input.focus();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// TRANSITION TO ROUND 2
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function transitionToRound2() {
+    const round1Card = document.getElementById('round1Card');
+    const round2Card = document.getElementById('round2Card');
+    const progressNodes = document.querySelectorAll('.progress-node');
+    const currentRoundText = document.getElementById('currentRound');
+    
+    // Hide Round 1
+    if (round1Card) {
+        round1Card.style.opacity = '0';
+        round1Card.style.transform = 'translateY(-50px)';
+        setTimeout(() => {
+            round1Card.classList.add('hidden');
+        }, 500);
+    }
+    
+    // Update progress tracker
+    if (progressNodes.length >= 2) {
+        // Mark Round 1 as completed
+        progressNodes[0].classList.remove('active');
+        progressNodes[0].classList.add('completed');
+        progressNodes[0].querySelector('.node-status').textContent = 'COMPLETED';
+        
+        // Activate Round 2
+        progressNodes[1].classList.add('active');
+        progressNodes[1].querySelector('.node-status').textContent = 'ACTIVE';
+    }
+    
+    // Update round counter
+    if (currentRoundText) {
+        AppState.currentRound = 2;
+    }
+    
+    // Show Round 2 after delay
+    setTimeout(() => {
+        if (round2Card) {
+            round2Card.classList.remove('hidden');
+            round2Card.style.opacity = '0';
+            round2Card.style.transform = 'translateY(50px)';
+            
+            setTimeout(() => {
+                round2Card.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                round2Card.style.opacity = '1';
+                round2Card.style.transform = 'translateY(0)';
+            }, 50);
+        }
+        
+        // Initialize Round 2
+        initRound2();
+        
+        // Start Round 2 timer
+        startRound2Timer();
+        
+        console.log('%c🎯 Round 2 Activated', 'color: #B300FF; font-size: 16px; font-weight: bold;');
+        console.log('%c⚠️  New challenge: Fragment assembly required', 'color: #FFD700; font-size: 13px;');
+    }, 800);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// ROUND 2 - FRAGMENT ASSEMBLY PROTOCOL
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function initRound2() {
+    const input = document.getElementById('round2Input');
+    const button = document.getElementById('round2Submit');
+    
+    if (!input || !button) return;
+    
+    // Button click handler
+    button.addEventListener('click', () => handleRound2Submit());
+    
+    // Enter key handler
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            handleRound2Submit();
+        }
+    });
+    
+    // Input effects
+    input.addEventListener('input', (e) => {
+        e.target.style.textTransform = 'uppercase';
+        
+        // Add typing glow effect
+        input.style.textShadow = '0 0 10px rgba(179, 0, 255, 0.5)';
+        setTimeout(() => {
+            input.style.textShadow = '';
+        }, 100);
+    });
+    
+    // Add button ripple effect
+    button.addEventListener('click', (e) => {
+        createButtonRipple(e, button);
+    });
+}
+
+function handleRound2Submit() {
+    const input = document.getElementById('round2Input');
+    const statusElement = document.getElementById('status2');
+    const attemptsElement = document.getElementById('attempts2');
+    const card = document.getElementById('round2Card');
+    
+    if (!input || !statusElement || !attemptsElement) return;
+    
+    const userInput = input.value.trim().toUpperCase();
+    
+    // Validate input
+    if (!userInput) {
+        showError(card, input, statusElement, 'Please enter a value');
+        return;
+    }
+    
+    // Update status
+    statusElement.textContent = 'VERIFYING MASTER PASSPHRASE...';
+    statusElement.className = 'stat-value status-analyzing';
+    
+    // Simulate processing delay
+    setTimeout(() => {
+        AppState.round2Attempts++;
+        AppState.totalAttempts++;
+        attemptsElement.textContent = AppState.round2Attempts;
+        
+        if (userInput === CHALLENGE_SOLUTIONS.round2.plaintext) {
+            // SUCCESS!
+            handleRound2Success(card, statusElement);
+        } else {
+            // FAILURE
+            handleRound2Failure(card, input, statusElement, attemptsElement);
+        }
+    }, 1000);
+}
+
+function handleRound2Success(card, statusElement) {
+    console.log('%c✅ Round 2 Complete!', 'color: #00FFA3; font-size: 16px; font-weight: bold;');
+    console.log('%c🏆 All rounds completed successfully!', 'color: #FFD700; font-size: 16px; font-weight: bold;');
+    
+    // Stop timer
+    stopRound2Timer();
+    
+    // Calculate total time
+    AppState.totalTime = AppState.round1Seconds + AppState.round2Seconds;
+    
+    // Update status
+    statusElement.textContent = 'MASTER VERIFICATION COMPLETE';
+    statusElement.className = 'stat-value status-success';
+    
+    // Success flash
+    card.classList.add('success-flash');
+    setTimeout(() => card.classList.remove('success-flash'), 500);
+    
+    // Massive particle burst
+    burstParticles(3);
+    
+    // Show victory screen
+    setTimeout(() => {
+        showVictoryScreen();
+    }, 1500);
+}
+
+function handleRound2Failure(card, input, statusElement, attemptsElement) {
+    // Update status
+    statusElement.textContent = 'ACCESS DENIED - VERIFICATION FAILED';
+    statusElement.className = 'stat-value status-error';
+    
+    // Error animations
+    card.classList.add('error-shake', 'error-flash');
+    setTimeout(() => {
+        card.classList.remove('error-shake', 'error-flash');
+    }, 500);
+    
+    // Clear input
+    input.value = '';
+    input.focus();
+    
+    // Particle burst (smaller)
+    burstParticles(0.5);
+    
+    // Update attempts color
+    if (AppState.round2Attempts >= 10) {
+        attemptsElement.style.color = '#FF4D4D';
+    } else if (AppState.round2Attempts >= 5) {
+        attemptsElement.style.color = '#FFD700';
+    }
+    
+    // Console hints
+    if (AppState.round2Attempts === 3) {
+        console.log('%c💡 HINT: Have you assembled all 4 fragments? Check HTML, CSS, and Console.', 'color: #FFD700; font-size: 13px; background: rgba(255, 215, 0, 0.1); padding: 8px; border-radius: 4px;');
+    }
+    
+    if (AppState.round2Attempts === 6) {
+        console.log('%c💡 HINT: The Round 2 key is different from Round 1. Look for "ROUND 2 AUTHENTICATION MODULE" in the source.', 'color: #FFD700; font-size: 13px; background: rgba(255, 215, 0, 0.1); padding: 8px; border-radius: 4px;');
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// VICTORY SCREEN
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function showVictoryScreen() {
+    const victoryOverlay = document.getElementById('victoryOverlay');
+    const flagValueElement = document.getElementById('flagValue');
+    const totalTimeElement = document.getElementById('totalTime');
+    const totalAttemptsElement = document.getElementById('totalAttempts');
+    
+    if (!victoryOverlay) return;
+    
+    // Hide main app
+    const mainApp = document.getElementById('mainApp');
+    if (mainApp) {
+        mainApp.style.opacity = '0';
+        setTimeout(() => {
+            mainApp.classList.add('hidden');
+        }, 500);
+    }
+    
+    // Show victory overlay
+    victoryOverlay.classList.remove('hidden');
+    
+    // Update progress tracker - all complete
+    const progressNodes = document.querySelectorAll('.progress-node');
+    if (progressNodes.length >= 3) {
+        progressNodes[1].classList.remove('active');
+        progressNodes[1].classList.add('completed');
+        progressNodes[1].querySelector('.node-status').textContent = 'COMPLETED';
+        
+        progressNodes[2].classList.add('completed');
+        progressNodes[2].querySelector('.node-status').textContent = 'ACHIEVED';
+    }
+    
+    // Create confetti
+    createConfetti();
+    
+    // Create fireworks
+    createFireworks();
+    
+    // Typewriter flag reveal
+    setTimeout(() => {
+        typewriterFlag(flagValueElement, CHALLENGE_SOLUTIONS.flag);
+    }, 1000);
+    
+    // Update stats
+    if (totalTimeElement) {
+        const minutes = Math.floor(AppState.totalTime / 60);
+        const seconds = AppState.totalTime % 60;
+        totalTimeElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+    
+    if (totalAttemptsElement) {
+        totalAttemptsElement.textContent = AppState.totalAttempts;
+    }
+    
+    // Console celebration
+    console.log('');
+    console.log('%c═══════════════════════════════════════════════════════════', 'color: #00FFA3; font-weight: bold;');
+    console.log('%c🏆  CONGRATULATIONS! CHALLENGE COMPLETED!  🏆', 'color: #00FFA3; font-size: 18px; font-weight: bold;');
+    console.log('%c═══════════════════════════════════════════════════════════', 'color: #00FFA3; font-weight: bold;');
+    console.log('');
+    console.log(`%cYour Flag: ${CHALLENGE_SOLUTIONS.flag}`, 'color: #FFD700; font-size: 16px; font-weight: bold; background: rgba(255, 215, 0, 0.1); padding: 12px; border-radius: 8px;');
+    console.log('');
+    console.log('%cStatistics:', 'color: #00F7FF; font-size: 14px; font-weight: bold;');
+    console.log(`%c  • Total Time: ${Math.floor(AppState.totalTime / 60)}:${String(AppState.totalTime % 60).padStart(2, '0')}`, 'color: #B8C0E0; font-size: 13px;');
+    console.log(`%c  • Total Attempts: ${AppState.totalAttempts}`, 'color: #B8C0E0; font-size: 13px;');
+    console.log(`%c  • Round 1 Attempts: ${AppState.round1Attempts}`, 'color: #B8C0E0; font-size: 13px;');
+    console.log(`%c  • Round 2 Attempts: ${AppState.round2Attempts}`, 'color: #B8C0E0; font-size: 13px;');
+    console.log('');
+    console.log('%cThank you for playing! 🎮', 'color: #B300FF; font-size: 13px;');
+    console.log('');
+}
+
+function typewriterFlag(element, flag) {
+    if (!element) return;
+    
+    let index = 0;
+    const interval = setInterval(() => {
+        if (index < flag.length) {
+            element.textContent += flag[index];
+            index++;
+            
+            // Sparkle effect
+            createFlagSparkle(element);
+        } else {
+            clearInterval(interval);
+        }
+    }, 100);
+}
+
+function createFlagSparkle(element) {
+    const sparkle = document.createElement('div');
+    sparkle.textContent = '✨';
+    sparkle.style.cssText = `
+        position: absolute;
+        font-size: 20px;
+        pointer-events: none;
+        animation: sparkleFade 1s ease-out forwards;
+    `;
+    sparkle.style.left = `${Math.random() * 100}%`;
+    sparkle.style.top = `${Math.random() * 100}%`;
+    
+    const container = element.closest('.flag-container');
+    if (container) {
+        container.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 1000);
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// CONFETTI SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function createConfetti() {
+    const container = document.getElementById('confetti');
+    if (!container) return;
+    
+    const colors = ['#00F7FF', '#B300FF', '#FF36E0', '#00FFA3', '#FFD700', '#FF4D4D'];
+    const confettiCount = 500;
+    
+    for (let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti-piece';
+        
+        const size = Math.random() * 10 + 5;
+        const left = Math.random() * 100;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const duration = Math.random() * 2 + 2;
+        const delay = Math.random() * 3;
+        
+        confetti.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            background: ${color};
+            left: ${left}%;
+            top: -20px;
+            animation: confettiFall ${duration}s ease-in ${delay}s forwards;
+            border-radius: 2px;
+            transform: rotate(${Math.random() * 360}deg);
+        `;
+        
+        container.appendChild(confetti);
+    }
+    
+    // Clear after animation
+    setTimeout(() => {
+        container.innerHTML = '';
+    }, 6000);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// FIREWORKS SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function createFireworks() {
+    const container = document.getElementById('fireworks');
+    if (!container) return;
+    
+    // Launch fireworks at intervals
+    for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+            launchFirework(container);
+        }, i * 500);
+    }
+}
+
+function launchFirework(container) {
+    const x = Math.random() * 100;
+    const y = Math.random() * 50 + 20;
+    const color = ['#00F7FF', '#B300FF', '#FF36E0', '#00FFA3', '#FFD700'][Math.floor(Math.random() * 5)];
+    
+    // Create burst
+    for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        const angle = (Math.PI * 2 * i) / 30;
+        const velocity = Math.random() * 3 + 2;
+        
+        particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: ${color};
+            border-radius: 50%;
+            left: ${x}%;
+            top: ${y}%;
+            box-shadow: 0 0 10px ${color};
+        `;
+        
+        container.appendChild(particle);
+        
+        // Animate particle
+        let posX = x;
+        let posY = y;
+        let velX = Math.cos(angle) * velocity;
+        let velY = Math.sin(angle) * velocity;
+        let opacity = 1;
+        
+        const animate = () => {
+            posX += velX;
+            posY += velY;
+            velY += 0.1; // Gravity
+            velX *= 0.98;
+            velY *= 0.98;
+            opacity -= 0.02;
+            
+            particle.style.left = `${posX}%`;
+            particle.style.top = `${posY}%`;
+            particle.style.opacity = opacity;
+            
+            if (opacity > 0) {
+                requestAnimationFrame(animate);
+            } else {
+                particle.remove();
+            }
+        };
+        
+        animate();
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// BUTTON RIPPLE EFFECT
+// ═══════════════════════════════════════════════════════════════════════════════════════
+function createButtonRipple(event, button) {
+    const rect = button.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    const ripple = document.createElement('div');
+    ripple.style.cssText = `
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        left: ${x}px;
+        top: ${y}px;
+        transform: translate(-50%, -50%);
+        animation: buttonRippleExpand 0.6s ease-out;
+        pointer-events: none;
+        z-index: 10;
+    `;
+    
+    const particlesContainer = button.querySelector('.button-particles');
+    if (particlesContainer) {
+        particlesContainer.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// INITIALIZATION ON PAGE LOAD
+// ═══════════════════════════════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('%c🚀 Initializing NEXUS SECURE...', 'color: #00F7FF; font-size: 14px; font-weight: bold;');
+    
+    // Start intro animation
+    initIntroAnimation();
+});
+
+// Cleanup on page unload
+window.addEventListener('beforeunload', () => {
+    // Cancel animation frames
+    if (AppState.particleAnimationFrame) {
+        cancelAnimationFrame(AppState.particleAnimationFrame);
+    }
+    
+    // Clear timers
+    if (AppState.round1Timer) clearInterval(AppState.round1Timer);
+    if (AppState.round2Timer) clearInterval(AppState.round2Timer);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// END OF MAIN.JS - PREMIUM JAVASCRIPT IMPLEMENTATION
+// ═══════════════════════════════════════════════════════════════════════════════════════AA
