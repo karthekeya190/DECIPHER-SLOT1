@@ -93,12 +93,12 @@ A(0) - Y(24) + 26 = 2 % 26 = 2 = C...
 Hmm, let me just say what it decrypts to based on the code:
 ```
 
-**Answer:** `ILOVECRYPTO`
+**Answer:** `ENCYCLOPEDIA`
 
 (You can verify this by using an online Vigenère decoder with key "KEY")
 
 #### Step 3: Submit
-Enter `ILOVECRYPTO` in the Round 1 input field.
+Enter `ENCYCLOPEDIA` in the Round 1 input field.
 
 ---
 
@@ -194,7 +194,7 @@ function vigenereDecrypt(ciphertext, key) {
 
 ## Summary
 
-1. **Round 1:** Find key "KEY" in main.js → Decrypt ORAIGJYTCNMY → Answer: ILOVECRYPTO
+1. **Round 1:** Find key "KEY" in main.js → Decrypt ORAIGJYTCNMY → Answer: ENCYCLOPEDIA
 2. **Round 2:** Find fragments (GPCTR, SKPET, FC, ZK) → Find key "EYE" → Decrypt GPCTRSKPETFCZK → Answer: CODINGISFUN
 3. **Victory:** Receive FLAG{VIGENERE_MASTER}
 

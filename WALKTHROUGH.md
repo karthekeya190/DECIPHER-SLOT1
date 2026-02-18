@@ -72,18 +72,18 @@ Now they need to decrypt `ORAIGJYTCNMY` using the Vigenère cipher with key `KEY
 ```
 Ciphertext: O  R  A  I  G  J  Y  T  C  N  M  Y
 Key:        K  E  Y  K  E  Y  K  E  Y  K  E  Y
-Result:     I  L  O  V  E  C  R  Y  P  T  O
+Result:     E  N  C  Y  C  L  O  P  E  D  I  A
 ```
 
 **Option C - Use Browser Console:**
 Players might use the `vigenereDecrypt` function they see in main.js:
 ```javascript
 vigenereDecrypt('ORAIGJYTCNMY', 'KEY')
-// Returns: "ILOVECRYPTO"
+// Returns: "ENCYCLOPEDIA"
 ```
 
 ### Step 4: Submit Answer
-- Enter `ILOVECRYPTO` in the input field
+- Enter `ENCYCLOPEDIA` in the input field
 - Click "Verify"
 - ✅ **Round 1 Complete!** Round 2 appears
 
@@ -299,7 +299,7 @@ After solving this challenge, players learn:
    ↓
 4. Check main.js → Find Round 1 key: KEY
    ↓
-5. Decrypt ORAIGJYTCNMY → ILOVECRYPTO
+5. Decrypt ORAIGJYTCNMY → ENCYCLOPEDIA
    ↓
 6. Submit Round 1 answer
    ↓
