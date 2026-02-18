@@ -148,13 +148,13 @@ Using Vigenère cipher with key "EYE":
 Ciphertext: G P C T R S K P E T F C Z K
 Key:        E Y E E Y E E Y E E Y E E Y
 
-Result: CODINGISFUN
+Result: CRYPTOGRAPHYVM
 ```
 
-**Answer:** `CODINGISFUN`
+**Answer:** `CRYPTOGRAPHYVM`
 
 #### Step 8: Submit
-Enter `CODINGISFUN` in the Round 2 input field.
+Enter `CRYPTOGRAPHYVM` in the Round 2 input field.
 
 ---
 
@@ -195,7 +195,7 @@ function vigenereDecrypt(ciphertext, key) {
 ## Summary
 
 1. **Round 1:** Find key "KEY" in main.js → Decrypt ORAIGJYTCNMY → Answer: ENCYCLOPEDIA
-2. **Round 2:** Find fragments (GPCTR, SKPET, FC, ZK) → Find key "EYE" → Decrypt GPCTRSKPETFCZK → Answer: CODINGISFUN
+2. **Round 2:** Find fragments (GPCTR, SKPET, FC, ZK) → Find key "EYE" → Decrypt GPCTRSKPETFCZK → Answer: CRYPTOGRAPHYVM
 3. **Victory:** Receive FLAG{VIGENERE_MASTER}
 
 Good luck! 🎯

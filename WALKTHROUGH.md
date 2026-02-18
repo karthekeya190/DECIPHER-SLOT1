@@ -173,11 +173,11 @@ Using Vigenère cipher with key `EYE`:
 **Using online tool or the function:**
 ```javascript
 vigenereDecrypt('GPCTRSKPETFCZK', 'EYE')
-// Returns: "CODINGISFUN"
+// Returns: "CRYPTOGRAPHYVM"
 ```
 
 ### Step 7: Submit Answer
-- Enter `CODINGISFUN`
+- Enter `CRYPTOGRAPHYVM`
 - Click "Complete"
 - 🏆 **Victory Screen Appears!**
 

@@ -45,7 +45,7 @@ let state = {
 
 // Correct answers
 const ROUND1_ANSWER = 'ENCYCLOPEDIA';
-const ROUND2_ANSWER = 'CODINGISFUN';
+const ROUND2_ANSWER = 'CRYPTOGRAPHYVM';
 const FLAG = 'FLAG{VIGENERE_MASTER}';
 
 // Initialize
